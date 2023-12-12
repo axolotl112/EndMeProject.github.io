@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects with textures</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+
+
+  <body>
+    <div id="hi"></div>
+    <canvas id="glcanvas"  height="1080" width="1920" style="background-image: url('images/back.png');">
+      Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    </canvas>
+
+    <div id="light-controls">
+      <h3>Light Controls</h3>
+      
+  
+      
+      <!-- Light Intensity -->
+      <div>
+        <label for="light-intensity">Intensity:</label>
+        <input type="range" id="light-intensity" name="light-intensity" min="0" max="2" step="0.1" value="1">
+      </div>
+      
+      <div id="light-settings">
+        <h3>Light Settings</h3>
+        
+        <!-- Diffuse Light Color -->
+        <div>
+          <label for="diffuse-color">Diffuse Color:</label>
+          <input type="color" id="diffuse-color" value="#ffffff">
+        </div>
+      
+        <!-- Ambient Light Color -->
+        <div>
+          <label for="ambient-color">Ambient Color:</label>
+          <input type="color" id="ambient-color" value="#ffffff">
+        </div>
+        
+        <!-- Light Position -->
+        <div>
+          <label>X Position:</label>
+          <input type="number" id="light-pos-x" value="1.0">
+          <br>
+          <label>Y Position:</label>
+          <input type="number" id="light-pos-y" value="2.0">
+          <br>
+          <label>Z Position:</label>
+          <input type="number" id="light-pos-z" value="1.7">
+        </div>
+      </div>
+
+      <div id="rotation-speed-control">
+  <label for="rotation-speed">Rotation Speed:</label>
+  <input type="range" id="rotation-speed" min="0.01" max="0.1" step="0.01" value="0.01">
+</div>
+
+
+
+    <!-- Shaders -->
+    <script name="shader" data-src="shaders/vertex.glsl" data-type="vertex" data-version="v1"></script>
+    <script name="shader" data-src="shaders/fragment.glsl" data-type="fragment" data-version="v1"></script>
+    <script name="shader" data-src="shaders/vertex2.glsl" data-type="vertex" data-version="v2"></script>
+    <script name="shader" data-src="shaders/fragment2.glsl" data-type="fragment" data-version="v2"></script>
+    <script name="shader" data-src="shaders/vertex3.glsl" data-type="vertex" data-version="v3"></script>
+    <script name="shader" data-src="shaders/fragment3.glsl" data-type="fragment" data-version="v3"></script>
+
+
+    <script name="shader" data-src="shaders/phongvertex.glsl" data-type="vertex" data-version="v4"></script>
+   <script name="shader" data-src="shaders/phongfragment.glsl" data-type="fragment" data-version="v4"></script>
+
+
+
+    <script type="text/javascript" src="camera.js"></script>
+
+
+    <script type="text/javascript" src="vendor/js/signals.js"></script>
+    <script type="text/javascript" src="libs/gl-matrix-test.js"></script>
+
+    <script type="text/javascript" src="libs/saKnife.js"></script>
+
+    <script type="text/javascript" src="vendor/js/glMatrix.js"></script>
+
+
+
+    <script type="text/javascript" src="libs/glUtils.js"></script>
+    <script type="text/javascript" src="libs/uiUtils.js"></script>
+
+  
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
